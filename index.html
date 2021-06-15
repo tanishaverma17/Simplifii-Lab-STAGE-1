@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARRAY</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg" alt="">
+      <div class="details">
+          <h3>TANISHA VERMA</h3>
+          <h3>ABES Engineering College</h3>
+          <h3>2020B0121194</h3>
+      </div>
+    </div>
+    <h3>ENTER AN ARRAY(seperated by comma)</h3>
+    
+    <input type="text" id="userinput" />
+    <input type="button" onclick="result()" value="Result" />
+
+    <script>
+      function result() {
+        function EvenOddSum(arr, n) {
+          let even = 0;
+          let odd = 0;
+          for (let i = 0; i < n; i++) {
+            if (arr[i] % 2 == 0) even += parseInt(arr[i]);
+            else odd += parseInt(arr[i]);
+          }
+          document.write("Sum of all Even Numbers:" + even);
+          document.write("<br>" + "Sum of all Odd Numbers:" + odd);
+        }
+    
+        let inputVal = document.getElementById("userinput").value;
+        let myArr = inputVal.split(",");
+        console.log(myArr);
+        let n = myArr.length;
+        EvenOddSum(myArr, n);
+      }
+    </script>
+  </body>
+</html>
